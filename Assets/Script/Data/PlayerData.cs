@@ -69,7 +69,7 @@ public class PlayerData
         List<string> stringIndexList = ImageIndexList.Select(x => x.ToString()).ToList();
         PlayerPrefs.SetString("imageIndexList", String.Join(",", stringIndexList));
         PlayerPrefs.SetInt(DATA_EXISTS_KEY, 1);
-        Debug.Log(String.Join(",", ImageDataList) + " - PlayerData Saved");
+
         PlayerPrefs.Save();
     }
     public static PlayerData LoadFromPlayerPrefs()
@@ -94,7 +94,6 @@ public class PlayerData
         {
             playerData.ImageIndexList = imageIndexString.Split(',').Select(int.Parse).ToList();
         }
-        Debug.Log("PlayerData loaded from PlayerPrefs");
         return playerData;
     }
     public static void DeleteAllData()
@@ -112,8 +111,7 @@ public class PlayerData
         PlayerPrefs.DeleteKey("imageIndexList");
         PlayerPrefs.DeleteKey(DATA_EXISTS_KEY);
         PlayerPrefs.Save();
-        
-        Debug.Log("All PlayerData deleted from PlayerPrefs");
+
     }
     public void ResetToDefaults()
     {
@@ -128,7 +126,6 @@ public class PlayerData
         Lives = 3;
         ImageDataList.Clear();
         ImageIndexList.Clear();
-        Debug.Log("PlayerData reset to default values");
     }
- 
+
 }

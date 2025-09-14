@@ -293,7 +293,6 @@ public class GameView : MonoBehaviour
             cardComponent.SetImageId(imageIndex);
             cardComponent.SetCardId(i);
             cardComponent.OnCardClicked += HandleCardClick;
-            Debug.Log("Card " + i + " starts hidden.");
             cardComponent.ToggleHideCard(true);
             _cards.Add(card);
         }

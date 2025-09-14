@@ -43,7 +43,6 @@ public class Card : MonoBehaviour
     public void ToggleHideCard(bool hide)
     {
         if (_isDestroyed) return;
-        Debug.Log($"ToggleHideCard called with hide={hide} for Card ID {_cardId}");
         _isRevealed = !hide;
         _isAnimating = true;
         if (_animator != null)

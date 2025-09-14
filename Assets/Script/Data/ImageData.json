@@ -2,36 +2,35 @@
     "images": [
         {
             "id": "1",
-            "fileName": "dino"
+            "fileName": "char1"
         },
         {
             "id": "2",
-            "fileName": "duck"
+            "fileName": "char2"
         },
         {
             "id": "3",
-            "fileName": "mario"
+            "fileName": "char3"
         },
         {
             "id": "4",
-            "fileName": "pluto"
+            "fileName": "char4"
         },
         {
             "id": "5",
-            "fileName": "sonic"
+            "fileName": "char5"
         },
         {
             "id": "6",
-            "fileName": "onepiece"
+            "fileName": "char6"
         },
         {
             "id": "7",
-            "fileName": "monkey"
+            "fileName": "char7"
         },
         {
             "id": "8",
-            "fileName": "mickey"
+            "fileName": "char8"
         }
-
     ]
 }

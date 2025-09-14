@@ -38,8 +38,6 @@ public class MenuHandler : MonoBehaviour
     }
     private void mainMenuEventHandler(object sender, ButtonClickEventArgs args)
     {
-        Debug.Log("Main Menu Event: " + args.ButtonName);
-
         switch (args.ButtonName)
         {
             case "Play":
@@ -52,7 +50,6 @@ public class MenuHandler : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Continue clicked but no save data exists!");
                     _mainMenu.RefreshContinueButtonState();
                 }
                 break;
@@ -65,8 +62,6 @@ public class MenuHandler : MonoBehaviour
     }
     private void gameMenuEventHandler(object sender, ButtonClickEventArgs args)
     {
-        Debug.Log("Game Menu Event: " + args.ButtonName);
-
         switch (args.ButtonName)
         {
             case "L1":
@@ -84,8 +79,6 @@ public class MenuHandler : MonoBehaviour
     }
     private void resultMenuEventHandler(object sender, ButtonClickEventArgs args)
     {
-        Debug.Log("Result Menu Event: " + args.ButtonName);
-
         switch (args.ButtonName)
         {
             case "NextGame":
@@ -101,14 +94,12 @@ public class MenuHandler : MonoBehaviour
         _currentResultData = playerData;
         showResultMenu();
         _resultMenu.ShowGameOver(playerData);
-        Debug.Log($"Showing Game Over result with score: {playerData.Score}");
     }
     public void ShowGameWonResult(PlayerData playerData)
     {
         _currentResultData = playerData;
         showResultMenu();
         _resultMenu.ShowGameWon(playerData);
-        Debug.Log($"Showing Game Won result with score: {playerData.Score}");
     }
     public void showGameMenu()
     {
